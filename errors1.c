@@ -113,11 +113,11 @@ int print_d(int input, int fd)
 
 	current = _abs_;
 
-	for (i = 1000000000; i > 1; i /= 10)
+			for (i = 1000000000; i > 1; i /= 10)
 
 	{
 
-	if (_abs_ / i)
+			if (_abs_ / i)
 
 		{
 			__putchar('0' + current / i);
@@ -206,7 +206,7 @@ void remove_comments(char *buf)
 
 		for (i = 0; buf[i] != '\0'; i++)
 
-		if (buf[i] == '#' && (!i || buf[i - 1] == ' '))
+			if (buf[i] == '#' && (!i || buf[i - 1] == ' '))
 
 			{
 				buf[i] = '\0';

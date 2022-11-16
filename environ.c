@@ -55,8 +55,7 @@ char *_getenv(info_t *info, const char *name)
 
 
 /**
- *
- *  * _mysetenv - Initialize a new environment variable,
+ * _mysetenv - Initialize a new environment variable,
  *             or modify an existing one
  * @info: Structure containing potential arguments. Used to maintain
  *        constant function prototype.
@@ -66,7 +65,8 @@ char *_getenv(info_t *info, const char *name)
 int _mysetenv(info_t *info)
 
 {
-	if (info->argc != 3)
+
+		if (info->argc != 3)
 
 		{
 			_eputs("Incorrect number of arguements\n");
