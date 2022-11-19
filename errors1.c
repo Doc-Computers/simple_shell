@@ -59,22 +59,14 @@ void print_error(info_t *info, char *estr)
 
 {
 	_eputs(info->fname);
-
 	_eputs(": ");
-
 	print_d(info->line_count, STDERR_FILENO);
-
 	_eputs(": ");
-
 	_eputs(info->argv[0]);
-
 	_eputs(": ");
-
 	_eputs(estr);
 
 }
-
-
 
 /**
  * print_d - function prints a decimal (integer) number (base 10)
@@ -98,11 +90,8 @@ int print_d(int input, int fd)
 	if (input < 0)
 
 	{
-
 	_abs_ = -input;
-
 	__putchar('-');
-
 	count++;
 
 	}
@@ -110,35 +99,24 @@ int print_d(int input, int fd)
 	else
 
 	_abs_ = input;
-
 	current = _abs_;
-
-			for (i = 1000000000; i > 1; i /= 10)
+for (i = 1000000000; i > 1; i /= 10)
 
 	{
 
-			if (_abs_ / i)
+	if (_abs_ / i)
 
 		{
-			__putchar('0' + current / i);
-
-			count++;
+		__putchar('0' + current / i);
+		count++;
 
 		}
-
 	current %= i;
-
 	}
-
 	__putchar('0' + current);
-
 	count++;
-
 	return (count);
-
 }
-
-
 
 /**
  * convert_number - converter function, a clone of itoa
@@ -166,19 +144,14 @@ char *convert_number(long int num, int base, int flags)
 	{
 		n = -num;
 
-		sign = '-';
+	sign = '-';
 	}
-
 	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
-
 	ptr = &buffer[49];
-
 	*ptr = '\0';
 
 	do	{
-
 	*--ptr = array[n % base];
-
 	n /= base;
 
 	} while (n != 0);
@@ -191,8 +164,6 @@ char *convert_number(long int num, int base, int flags)
 
 }
 
-
-
 /**
  * remove_comments - function replaces first instance of '#' with '\0'
  * @buf: address of the string to modify
@@ -203,14 +174,12 @@ void remove_comments(char *buf)
 
 {
 	int i;
-
 		for (i = 0; buf[i] != '\0'; i++)
 
 			if (buf[i] == '#' && (!i || buf[i - 1] == ' '))
 
 			{
 				buf[i] = '\0';
-
 				break;
 
 			}

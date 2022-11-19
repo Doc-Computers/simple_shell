@@ -38,16 +38,16 @@ extern char **environ;
 
 
 /**
- * struct liststr - singly linked list
- * @num: the number field
- * @str: a string
- * @next: points to the next node
- */
+ *  * struct liststr - singly linked list
+ *   * @num: the number field
+ *    * @str: a string
+ *     * @next: points to the next node
+ *      */
 typedef struct liststr
 {
-	int num;
-	char *str;
-	struct liststr *next;
+		int num;
+			char *str;
+				struct liststr *next;
 } list_t;
 
 /**
@@ -74,24 +74,24 @@ typedef struct liststr
  */
 typedef struct passinfo
 {
-	char *arg;
-	char **argv;
-	char *path;
-	int argc;
-	unsigned int line_count;
-	int err_num;
-	int linecount_flag;
-	char *fname;
-	list_t *env;
-	list_t *history;
-	list_t *alias;
-	char **environ;
-	int env_changed;
-	int status;
+		char *arg;
+		char **argv;
+		char *path;
+		int argc;
+		unsigned int line_count;
+		int err_num;
+		int linecount_flag;
+		char *fname;
+		list_t *env;
+		list_t *history;
+		list_t *alias;
+		char **environ;
+		int env_changed;
+		int status;
 
-	char **cmd_buf; /* pointer to cmd ; chain buffer, for memory mangement */
-																	int cmd_buf_type; /* CMD_type ||, &&, ; */
-																		int readfd;
+char **cmd_buf; /* pointer to cmd ; chain buffer, for memory mangement */
+int cmd_buf_type; /* CMD_type ||, &&, ; */
+int readfd;
 																			int histcount;
 } info_t;
 
@@ -100,14 +100,14 @@ typedef struct passinfo
 		0, 0, 0}
 
 /**
- *struct builtin - contains a builtin string and related function
- * @type: the builtin command flag
- *@func: the function
- */
+ *  *struct builtin - contains a builtin string and related function
+ *   *@type: the builtin command flag
+ *    *@func: the function
+ *     */
 typedef struct builtin
 {
-	char *type;
-	int (*func)(info_t *);
+		char *type;
+			int (*func)(info_t *);
 } builtin_table;
 
 
