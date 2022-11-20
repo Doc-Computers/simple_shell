@@ -165,7 +165,7 @@ return (p ? free(p), -1 : -1);
 	if (length)
 	*length = s;
 *ptr = p;
-return (s);
+		return (s);
 }
 
 /**
